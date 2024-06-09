@@ -302,4 +302,4 @@ Please report this to https://github.com/markedjs/marked.`,t){const i="<p>An err
         color: #fff;
         text-decoration: none;
     }
-`;function Nx(){const[e,t]=Z.useState("");return le.jsxs(le.Fragment,{children:[le.jsx(Ix,{}),le.jsxs(aw,{children:[le.jsx(xc,{path:"/",element:le.jsx(Ex,{text:e,setText:t})}),le.jsx(xc,{path:"/note-list",element:le.jsx(Ox,{setText:t})})]})]})}Pa.createRoot(document.getElementById("root")).render(le.jsx(Zt.StrictMode,{children:le.jsx(gw,{children:le.jsx(Nx,{})})}));
+`;function Nx(){const[e,t]=Z.useState("");return le.jsxs(le.Fragment,{children:[le.jsx(Ix,{}),le.jsxs(aw,{children:[le.jsx(xc,{path:"/",element:le.jsx(Ex,{text:e,setText:t})}),le.jsx(xc,{path:"/note-list",element:le.jsx(Ox,{setText:t})})]})]})}Pa.createRoot(document.getElementById("root")).render(le.jsx(Zt.StrictMode,{children:le.jsx(gw,{basename:"/knowledge-box-beta",children:le.jsx(Nx,{})})}));
