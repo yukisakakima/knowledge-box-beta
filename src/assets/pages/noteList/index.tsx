@@ -19,17 +19,15 @@ import {
   deleteMemo,
 } from "../../libs/memoDatabase";
 import { Button } from "../../components/button";
+import { useEditorContext } from "../../../contexts/EditorProvider";
 
-interface Props {
-  setText: (text: string) => void;
-}
-
-export const NoteList: FunctionComponent<Props> = (props) => {
-  const { setText } = props;
+export const NoteList: FunctionComponent = () => {
   const [memos, setMemos] = useState<MemoRecord[]>([]);
   const [page, setPage] = useState(1);
   const [maxPage, setMaxPage] = useState(1);
   const navigate = useNavigate();
+
+  const { setText } = useEditorContext();
 
   useEffect(() => {
     getMemos(1).then(setMemos);

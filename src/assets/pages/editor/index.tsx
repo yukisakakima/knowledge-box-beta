@@ -16,17 +16,15 @@ import {
   LinkPreview,
 } from "./styled";
 import { putMemo } from "../../libs/memoDatabase";
+import { useEditorContext } from "../../../contexts/EditorProvider";
 
-interface Props {
-  text: string;
-  setText: (text: string) => void;
-}
-
-export const Editor: FunctionComponent<Props> = ({ text, setText }) => {
+export const Editor: FunctionComponent = () => {
   const [showModal, setShowModal] = useState(false);
   const [html, setHtml] = useState<string>("");
   const [url, setUrl] = useState<string>("");
   const [linkTitle, setLinkTitle] = useState<string>("");
+
+  const { text, setText } = useEditorContext();
 
   useEffect(() => {
     const htmlContent = marked(text) as string;
