@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 // markdownをHTMLに変換するライブラリ
 import { marked } from "marked";
 
-import { Header } from "../../components/header";
-import { Button } from "../../components/button";
-import { SaveModal } from "../../components/saveModal";
+import { Header } from "../../../components/header";
+import { Button } from "../../../components/button";
+import { SaveModal } from "../../../components/saveModal";
 import {
   Wrapper,
   TextArea,
