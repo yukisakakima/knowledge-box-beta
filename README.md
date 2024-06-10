@@ -1,30 +1,48 @@
-# React + TypeScript + Vite
+# Knowledge Box beta
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 概要
 
-Currently, two official plugins are available:
+Knowledge Box beta は、知識をストックできるノートアプリです。
+私が過去に作ったアプリ、[Quick Quill](https://quick-quill.herokuapp.com/) を新たな技術スタックで最適化を試みたアプリになっております。
+※ 現在も絶賛、開発中のため beta としております。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## セットアップ手順
 
-## Expanding the ESLint configuration
+### 必要な前提条件
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Node.js v21.1.0
+- npm または yarn
 
-- Configure the top-level `parserOptions` property like this:
+### インストール方法
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+1. リポジトリをクローンします。
+
+```zsh
+git clone https://github.com/yukisakakima/knowledge-box-beta.git
+cd knowledge-box-beta
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. 依存関係をインストールします。
+
+```zsh
+npm install
+yarn install
+```
+
+## 実行方法
+
+### 開発環境での実行
+
+```zsh
+npm run dev
+yarn dev
+```
+
+## 使用技術
+
+- React v18
+- React DOM v18
+- TypeScript v5
+- react-router-dom
+- styled-components v6.1.11
+- ESLint v8
