@@ -2,8 +2,8 @@
 
 ## 概要
 
-Knowledge Box beta は、知識をストックできるノートアプリです。
-私が過去に作ったアプリ、[Quick Quill](https://quick-quill.herokuapp.com/) を新たな技術スタックで最適化を試みたアプリになっております。
+Knowledge Box beta は、知識をストックできるノートアプリです。</br>
+私が過去に作ったアプリ、[Quick Quill](https://quick-quill.herokuapp.com/) を新たな技術スタックで最適化を試みたアプリになっております。</br>
 ※ 現在も絶賛、開発中のため beta としております。
 
 ## セットアップ手順
