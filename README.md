@@ -38,11 +38,18 @@ npm run dev
 yarn dev
 ```
 
+### デプロイ
+
+```zsh
+npm run deploy
+yarn deploy
+```
+
 ## 使用技術
 
 - React v18
-- React DOM v18
 - TypeScript v5
-- react-router-dom
+- React Router
 - styled-components v6.1.11
+- Dexie
 - ESLint v8
