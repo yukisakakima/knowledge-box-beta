@@ -55,7 +55,7 @@ export const NoteList: FunctionComponent = () => {
   return (
     <>
       <Header title="Note List" titleTag="h2">
-        <Button onClick={() => navigate("/")}>Back</Button>
+        <Button onClick={() => navigate("/")}>BACK</Button>
       </Header>
       <Wrapper>
         {memos.map((memo) => (
@@ -69,7 +69,7 @@ export const NoteList: FunctionComponent = () => {
               <MemoTitle>{memo.title}</MemoTitle>
               <MemoText>{memo.text}</MemoText>
             </div>
-            <Button onClick={() => handleDelete(memo.datetime)}>Delete</Button>
+            <Button onClick={() => handleDelete(memo.datetime)}>DELETE</Button>
           </Memo>
         ))}
       </Wrapper>
