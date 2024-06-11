@@ -1,6 +1,5 @@
 import { useState, useEffect, FunctionComponent } from "react";
 import { Link } from "react-router-dom";
-// markdownをHTMLに変換するライブラリ
 import { marked } from "marked";
 
 import { Header } from "../../../components/header";
@@ -17,6 +16,7 @@ import {
 } from "./styled";
 import { putMemo } from "../../libs/memoDatabase";
 import { useEditorContext } from "../../../contexts/EditorProvider";
+import "github-markdown-css";
 
 export const Editor: FunctionComponent = () => {
   const [showModal, setShowModal] = useState(false);
@@ -76,7 +76,7 @@ export const Editor: FunctionComponent = () => {
           onChange={(event) => setText(event.target.value)}
           value={text}
         />
-        <Preview>
+        <Preview className="markdown-body">
           <div dangerouslySetInnerHTML={{ __html: html }} />
           <LinkPreview>
             {linkTitle && (
