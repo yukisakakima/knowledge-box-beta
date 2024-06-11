@@ -7,8 +7,7 @@ interface Props {
   onCancel: () => void;
 }
 
-export const SaveModal: FunctionComponent<Props> = (props) => {
-  const { onCancel, onSave } = props;
+export const SaveModal: FunctionComponent<Props> = ({ onSave, onCancel }) => {
   const [title, setTitle] = useState(new Date().toISOString());
 
   return (

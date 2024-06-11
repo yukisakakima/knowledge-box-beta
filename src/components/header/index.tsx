@@ -6,11 +6,15 @@ interface Props {
   titleTag?: "h1" | "h2";
   children?: ReactNode;
 }
-export const Header: FunctionComponent<Props> = (props) => (
+export const Header: FunctionComponent<Props> = ({
+  title,
+  titleTag,
+  children,
+}) => (
   <HeaderWrapper>
     <HeaderLeft>
-      <HeaderTitle as={props.titleTag}>{props.title}</HeaderTitle>
+      <HeaderTitle as={titleTag}>{title}</HeaderTitle>
     </HeaderLeft>
-    <HeaderRight>{props.children}</HeaderRight>
+    <HeaderRight>{children}</HeaderRight>
   </HeaderWrapper>
 );

@@ -1,17 +1,9 @@
 import styled from "styled-components";
 
-export const HeaderArea = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-`;
-
 export const ButtonGroup = styled.div`
   display: flex;
   gap: 10px;
+  text-align: center;
 `;
 
 export const Wrapper = styled.div`
@@ -63,16 +55,4 @@ export const URLInput = styled.input`
   font-size: 16px;
   background-color: #222;
   color: #fff;
-`;
-
-export const LinkPreview = styled.div`
-  margin-top: 20px;
-  a {
-    font-size: 16px;
-    color: #1e90ff;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 `;

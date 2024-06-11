@@ -7,11 +7,12 @@ interface Props {
   onClick: () => void;
 }
 
-export const Button: FunctionComponent<Props> = (props) => (
-  <StyledButton
-    onClick={props.onClick}
-    className={props.cancel ? "cancel" : ""}
-  >
-    {props.children}
+export const Button: FunctionComponent<Props> = ({
+  cancel,
+  children,
+  onClick,
+}) => (
+  <StyledButton onClick={onClick} className={cancel ? "cancel" : ""}>
+    {children}
   </StyledButton>
 );
