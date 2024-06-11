@@ -10,6 +10,12 @@ export const HeaderWrapper = styled.header`
   margin: 0;
 `;
 
+export const HeaderLeft = styled.div`
+  display: flex;
+  align-content: center;
+  justify-content: center;
+`;
+
 export const HeaderRight = styled.div`
   display: flex;
   align-content: center;
@@ -18,12 +24,6 @@ export const HeaderRight = styled.div`
   & > * {
     margin-left: 8px;
   }
-`;
-
-export const HeaderLeft = styled.div`
-  display: flex;
-  align-content: center;
-  justify-content: center;
 `;
 
 export const HeaderTitle = styled.div`
