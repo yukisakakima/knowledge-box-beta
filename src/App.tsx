@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import { Editor } from "./assets/pages/editor";
-import { NoteList } from "./assets/pages/noteList";
+import { Editor } from "./pages/editor";
+import { NoteList } from "./pages/noteList";
 import { GlobalStyle } from "./assets/style/globalStyle";
 import { EditorProvider } from "./contexts/EditorProvider";
 

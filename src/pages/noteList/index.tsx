@@ -1,7 +1,7 @@
 import { useState, useEffect, FunctionComponent } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Header } from "../../../components/header";
+import { Header } from "../../components/header";
 
 import {
   Wrapper,
@@ -18,8 +18,8 @@ import {
   MemoRecord,
   deleteMemo,
 } from "../../libs/memoDatabase";
-import { Button } from "../../../components/button";
-import { useEditorContext } from "../../../contexts/EditorProvider";
+import { Button } from "../../components/button";
+import { useEditorContext } from "../../contexts/EditorProvider";
 
 export const NoteList: FunctionComponent = () => {
   const [memos, setMemos] = useState<MemoRecord[]>([]);
