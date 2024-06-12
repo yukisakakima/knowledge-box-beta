@@ -63,3 +63,4 @@ yarn deploy
 - styled-components v6.1.11
 - Dexie
 - ESLint v8
+- GitHub Pages
