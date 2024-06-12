@@ -2,14 +2,14 @@ import { useState, useEffect, FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import { marked } from "marked";
 
-import { Header } from "../../../components/header";
-import { Button } from "../../../components/button";
-import { SaveModal } from "../../../components/saveModal";
+import { Header } from "../../components/header";
+import { Button } from "../../components/button";
+import { SaveModal } from "../../components/saveModal";
 import { Wrapper, TextArea, Preview, ButtonGroup } from "./styled";
 import { putMemo } from "../../libs/memoDatabase";
-import { useEditorContext } from "../../../contexts/EditorProvider";
+import { useEditorContext } from "../../contexts/EditorProvider";
 import "github-markdown-css";
-import { LinkButton } from "../../../components/linkButton";
+import { LinkButton } from "../../components/linkButton";
 
 export const Editor: FunctionComponent = () => {
   const [showModal, setShowModal] = useState(false);
