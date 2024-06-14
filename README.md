@@ -55,6 +55,14 @@ npm run deploy
 yarn deploy
 ```
 
+## コード整形
+
+PrettierとESLintの実行(連携済み)
+
+```zsh
+npm run format
+```
+
 ## 使用技術
 
 - React v18
