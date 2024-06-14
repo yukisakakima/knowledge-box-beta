@@ -1,4 +1,10 @@
-import { FunctionComponent, createContext, useContext, useState } from "react";
+import {
+  FunctionComponent,
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+} from "react";
 
 interface EditorContextType {
   text: string;
@@ -11,7 +17,7 @@ const EditorContext = createContext<EditorContextType>({
 });
 
 interface ProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const EditorProvider: FunctionComponent<ProviderProps> = ({
