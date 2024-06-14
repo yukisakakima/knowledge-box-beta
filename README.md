@@ -70,5 +70,6 @@ npm run format
 - React Router
 - styled-components v6.1.11
 - Dexie
-- ESLint v8
+- Prettier 10.2.0
+- ESLint v8.57.0
 - GitHub Pages
