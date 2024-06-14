@@ -9,5 +9,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <Router basename="/knowledge-box-beta">
       <App />
     </Router>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
