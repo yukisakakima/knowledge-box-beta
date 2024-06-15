@@ -67,9 +67,9 @@ npm run format
 
 - React v18
 - TypeScript v5
-- React Router
-- styled-components v6.1.11
-- Dexie
-- Prettier 10.2.0
+- React Router v6.23.1
+- Emotion v11.11.4
+- Dexie v4.0.7
+- Prettier v3.3.2
 - ESLint v8.57.0
 - GitHub Pages
