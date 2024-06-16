@@ -2,9 +2,9 @@
 
 ## 概要
 
-Knowledge Box beta は、知識をストックできるノートアプリです。</br>
-私が過去に作ったアプリ、[Quick Quill](https://quick-quill.herokuapp.com/) を新たな技術スタックで最適化を試みたアプリになっております。</br>
-※ 現在も絶賛、開発中のため beta としております。
+Knowledge Box beta は、知識を効率的にストックできるノートアプリです。</br>
+私が過去に作ったアプリ、[Quick Quill](https://quick-quill.herokuapp.com/) を新たな技術スタックで最適化を試みているアプリになります。</br>
+現在、開発中のため beta版 としております。(2024.06開発開始)
 
 ## 画面
 
@@ -73,3 +73,8 @@ npm run format
 - Prettier v3.3.2
 - ESLint v8.57.0
 - GitHub Pages
+
+## 導入中の技術
+
+- Supabase
+- Redux Toolkit
