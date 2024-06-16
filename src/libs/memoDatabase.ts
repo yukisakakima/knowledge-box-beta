@@ -4,6 +4,7 @@ export interface MemoRecord {
   datetime: string;
   title: string;
   text: string;
+  referenceURL: string;
 }
 
 const db = new Dexie("memoDatabase");
@@ -13,9 +14,13 @@ db.version(1).stores({
 
 const memos = db.table<MemoRecord>("memos");
 
-export const putMemo = async (title: string, text: string): Promise<void> => {
+export const putMemo = async (
+  title: string,
+  text: string,
+  referenceURL: string
+): Promise<void> => {
   const datetime = new Date().toISOString();
-  await memos.put({ datetime, title, text });
+  await memos.put({ datetime, title, text, referenceURL });
 };
 
 export const getMemos = async (page: number): Promise<MemoRecord[]> => {

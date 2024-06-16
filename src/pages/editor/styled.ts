@@ -8,10 +8,13 @@ export const ButtonGroup = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-flow: column;
   margin: 20px;
-  height: calc(100vh - 500px);
+`;
+
+export const MainEditor = styled.div`
+  display: flex;
+  height: calc(100vh - 200px);
 `;
 
 export const TextArea = styled.textarea`
@@ -42,8 +45,7 @@ export const Preview = styled.div`
 export const URLForm = styled.div`
   display: flex;
   flex-direction: column;
-  width: calc(100% - 60px);
-  margin: 20px;
+  padding-top: 10px;
 `;
 
 export const URLInput = styled.input`
@@ -52,7 +54,5 @@ export const URLInput = styled.input`
   margin-top: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 16px;
-  background-color: #222;
   color: #fff;
 `;
