@@ -61,6 +61,7 @@ PrettierとESLintの実行(連携済み)
 
 ```zsh
 npm run format
+yarn format
 ```
 
 ## 使用技術
