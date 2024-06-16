@@ -27,7 +27,7 @@ export const NoteList: FunctionComponent = () => {
   const [maxPage, setMaxPage] = useState(1);
   const navigate = useNavigate();
 
-  const { setText } = useEditorContext();
+  const { setText, setReferenceURL } = useEditorContext();
 
   useEffect(() => {
     getMemos(1).then(setMemos);
@@ -54,40 +54,46 @@ export const NoteList: FunctionComponent = () => {
 
   return (
     <>
-      <Header title="Note List" titleTag="h2">
-        <Button onClick={() => navigate("/")}>BACK</Button>
-      </Header>
-      <Wrapper>
-        {memos.map((memo) => (
-          <Memo key={memo.datetime}>
-            <div
+      <article>
+        <Header title="Note List" titleTag="h2">
+          <Button onClick={() => navigate("/")}>BACK</Button>
+        </Header>
+        <Wrapper>
+          {memos.map((memo) => (
+            <Memo
+              key={memo.datetime}
               onClick={() => {
                 setText(memo.text);
+                setReferenceURL(memo.referenceURL);
                 navigate("/");
               }}
             >
-              <MemoTitle>{memo.title}</MemoTitle>
-              <MemoText>{memo.text}</MemoText>
-            </div>
-            <Button onClick={() => handleDelete(memo.datetime)}>DELETE</Button>
-          </Memo>
-        ))}
-      </Wrapper>
-      <Paging>
-        <PagingButton
-          onClick={() => movePage(page - 1)}
-          disabled={!canPrevPage}
-        >
-          ＜
-        </PagingButton>
-        {page} / {maxPage}
-        <PagingButton
-          onClick={() => movePage(page + 1)}
-          disabled={!canNextPage}
-        >
-          ＞
-        </PagingButton>
-      </Paging>
+              <div>
+                <MemoTitle>{memo.title}</MemoTitle>
+                <MemoText>{memo.text}</MemoText>
+              </div>
+              <Button onClick={() => handleDelete(memo.datetime)}>
+                DELETE
+              </Button>
+            </Memo>
+          ))}
+        </Wrapper>
+        <Paging>
+          <PagingButton
+            onClick={() => movePage(page - 1)}
+            disabled={!canPrevPage}
+          >
+            ＜
+          </PagingButton>
+          {page} / {maxPage}
+          <PagingButton
+            onClick={() => movePage(page + 1)}
+            disabled={!canNextPage}
+          >
+            ＞
+          </PagingButton>
+        </Paging>
+      </article>
     </>
   );
 };
