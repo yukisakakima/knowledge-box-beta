@@ -72,7 +72,12 @@ export const NoteList: FunctionComponent = () => {
                 <MemoTitle>{memo.title}</MemoTitle>
                 <MemoText>{memo.text}</MemoText>
               </div>
-              <Button onClick={() => handleDelete(memo.datetime)}>
+              <Button
+                onClick={(e) => {
+                  e.stopPropagation(); // イベントのバブリングを停止
+                  handleDelete(memo.datetime);
+                }}
+              >
                 DELETE
               </Button>
             </Memo>

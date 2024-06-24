@@ -18,8 +18,11 @@ import { putMemo } from "../../libs/memoDatabase";
 import { useEditorContext } from "../../contexts/EditorProvider";
 import "github-markdown-css";
 import { LinkButton } from "../../components/linkButton";
+import { useAuthContext } from "../../App";
 
-export const Editor: FunctionComponent = () => {
+export const EditorPage: FunctionComponent = () => {
+  const { session } = useAuthContext();
+
   const [showModal, setShowModal] = useState(false);
   const [html, setHtml] = useState<string>("");
 
@@ -29,6 +32,15 @@ export const Editor: FunctionComponent = () => {
     const htmlContent = marked(text) as string;
     setHtml(htmlContent);
   }, [text]);
+
+  if (!session) {
+    return (
+      <div>
+        <p>ログインしてください</p>
+        <Link to="/login">ログイン</Link>
+      </div>
+    );
+  }
 
   return (
     <>

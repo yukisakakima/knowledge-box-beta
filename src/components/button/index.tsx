@@ -4,7 +4,7 @@ import { StyledButton } from "./styled";
 interface Props {
   cancel?: boolean;
   children: string;
-  onClick: () => void;
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const Button: FunctionComponent<Props> = ({
